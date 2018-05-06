@@ -136,3 +136,6 @@ hi NonText ctermfg=black guifg=black
 " Changing search highlight color
 hi Search cterm=NONE ctermfg=black ctermbg=gray
 
+" Don't generate swap files
+set noswapfile
+
