@@ -1,0 +1,16 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "spellright.language": "pt",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "spellright.notificationClass": "warning",
+    "spellright.spellContext": "body strings",
+    "editor.wordWrapColumn": 80,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.rulers": [
+        80
+    ]
+}
