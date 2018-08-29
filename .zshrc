@@ -99,4 +99,5 @@ export OPF_PATH="/Users/lzfelix/Desktop/sandbox/LibOPF_/bin/"
 
 # you can call this lazyness or productivity :)
 alias p='python'
+alias v='vim'
 
