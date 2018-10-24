@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:/Users/lzfelix/anaconda3/bin
+export PATH=$PATH:/usr/local/bin/subl
 
 alias mirror="source activate mirror"
 
@@ -98,4 +99,5 @@ export OPF_PATH="/Users/lzfelix/Desktop/sandbox/LibOPF_/bin/"
 
 # you can call this lazyness or productivity :)
 alias p='python'
+alias v='vim'
 
