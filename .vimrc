@@ -1,14 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
 Plug 'davidhalter/jedi-vim'          " just don't forget to install jedi from pythonx/jedi with git submodule update --init on the repo
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
  
@@ -34,17 +31,17 @@ let NERDTreeAutoDeleteBuffer = 1
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 
 " JEDI
-"let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_tabs_not_buffers = 1
 let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#auto_close_doc = 1                           " close preview window after completion
+let g:jedi#show_call_signatures = "0"
 autocmd FileType python setlocal completeopt-=preview   " don't show string docs during autocomplete
-let g:pymode_rope = 0
 
-" For some reason my VIM's autocomplete suggestion pop is pink
+" For some reason my VIM's autocomplete suggestion pop up is pink
 highlight Pmenu ctermfg=white ctermbg=black
 highlight PmenuSel ctermfg=black ctermbg=blue
 
-" Supertab cycloes options from top to bottom
+" Supertab cycles options from top to bottom
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Syntastic stuff
@@ -99,7 +96,7 @@ set autoindent nosmartindent
 set smarttab
 set expandtab
 
-" Turn on mouse for select / resize panes
+" Turn on mouse to select / resize panes
 set mouse=a
 vmap <C-c> "+y
 
