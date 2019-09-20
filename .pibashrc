@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     temp_celsius=$(echo $(/opt/vc/bin/vcgencmd measure_temp) | cut -d'=' -f 2)
-    PS1='[${temp_celsius}] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+    PS1='[$(echo $(/opt/vc/bin/vcgencmd measure_temp) | cut -d'=' -f 2)] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$'
 fi
@@ -114,3 +114,10 @@ if ! shopt -oq posix; then
 fi
 
 alias ll='ls -latr'
+
+# Conda stuff
+export PATH="/home/pi/miniconda3/bin:$PATH"
+
+
+# added by Miniconda3 3.16.0 installer
+export PATH="/home/pi/miniconda3/bin:$PATH"
